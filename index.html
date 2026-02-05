@@ -64,7 +64,7 @@
 	<div id="big-message" class="big-message" aria-hidden="true"></div>
 
 	<script>
-		// asset filenames discovered in the workspace
+		// asset filenames from assets folder
 		const assetNames = [
 			'dachshund1.gif',
 			'dachshund2.gif',
@@ -205,10 +205,10 @@
 					{dx: -1.6, dy: 0} // far left-center
 				];
 
-				names.forEach((name, i)=>{
-					const img = document.createElement('img');
-					img.src = './assets/' + name;
-					const isPibble = name.toLowerCase().includes('pibble');
+			names.forEach((name, i)=>{
+				const img = document.createElement('img');
+				img.src = './assets/' + name;
+				const isPibble = name.toLowerCase().includes('pibble');
 					img.className = 'asset-gif' + (isPibble ? ' pibble' : '');
 					const size = isPibble ? Math.min(420, 240 + Math.random()*160) : Math.min(160, 80 + Math.random()*120);
 					img.style.width = size + 'px';
