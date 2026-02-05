@@ -45,7 +45,7 @@
 	<div class="card" id="card">
 		<h1>Will you be my valentine?</h1>
 		<div class="gif-frame" aria-hidden="true">
-			<img id="dachshund" src="assets/Flower%20Dachshund%20GIF%20by%20beangoods.gif" alt="dachshund" />
+			<img id="dachshund" src="assets/dachshund1.gif" alt="dachshund" />
 		</div>
 		<div class="message-area">
 			<div class="messages-list" id="messages"></div>
@@ -66,14 +66,14 @@
 	<script>
 		// asset filenames discovered in the workspace
 		const assetNames = [
-			'Flower Dachshund GIF by beangoods.gif',
+			'dachshund1.gif',
 			'dachshund2.gif',
-			'Pibble GIF.gif',
+			'pibble1.gif',
 			'pibblegif2.gif',
 			'sealgif.webp',
 			'loveback.jpg'
 		];
-		const persistentDachshundName = 'Flower Dachshund GIF by beangoods.gif';
+		const persistentDachshundName = 'dachshund1.gif';
 
 		const yes = document.getElementById('yes');
 		const no = document.getElementById('no');
@@ -207,7 +207,7 @@
 
 				names.forEach((name, i)=>{
 					const img = document.createElement('img');
-					img.src = 'assets/' + encodeURIComponent(name);
+					img.src = 'assets/' + name;
 					const isPibble = name.toLowerCase().includes('pibble');
 					img.className = 'asset-gif' + (isPibble ? ' pibble' : '');
 					const size = isPibble ? Math.min(420, 240 + Math.random()*160) : Math.min(160, 80 + Math.random()*120);
