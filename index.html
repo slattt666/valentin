@@ -8,7 +8,7 @@
 		:root{--card-size: min(85vmin,720px);--accent:#ff6b9a}
 		html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
 		body{
-			background: url('assets/loveback.jpg') center/cover no-repeat fixed;
+			background: url('./assets/loveback.jpg') center/cover no-repeat fixed;
 			display:flex;align-items:center;justify-content:center;padding:20px;
 		}
 		.card{
@@ -45,7 +45,7 @@
 	<div class="card" id="card">
 		<h1>Will you be my valentine?</h1>
 		<div class="gif-frame" aria-hidden="true">
-			<img id="dachshund" src="assets/dachshund1.gif" alt="dachshund" />
+			<img id="dachshund" src="./assets/dachshund1.gif" alt="dachshund" />
 		</div>
 		<div class="message-area">
 			<div class="messages-list" id="messages"></div>
@@ -207,7 +207,7 @@
 
 				names.forEach((name, i)=>{
 					const img = document.createElement('img');
-					img.src = 'assets/' + name;
+					img.src = './assets/' + name;
 					const isPibble = name.toLowerCase().includes('pibble');
 					img.className = 'asset-gif' + (isPibble ? ' pibble' : '');
 					const size = isPibble ? Math.min(420, 240 + Math.random()*160) : Math.min(160, 80 + Math.random()*120);
